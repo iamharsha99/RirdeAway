@@ -35,9 +35,11 @@ function VehicleCard({ details }) {
                 height: 400,
                 margin: 2,
                 position: 'relative',
-                transition: 'transform 0.3s',
+                transition: 'transform 0.3s, box-shadow 0.3s',
+                border: '1px solid #ccc',
                 '&:hover': {
-                    transform: 'scale(1.05)'
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
                 }
             }}
             className={cardClasses}
@@ -48,9 +50,12 @@ function VehicleCard({ details }) {
                     height="157"
                     image={imageUrl}
                     alt="Vehicle image"
+                    sx={{
+                        borderBottom: '1px solid #ccc',
+                    }}
                 />
                 <CardContent className='text-center'>
-                    <Typography variant="h5">{details.make} {details.model}</Typography>
+                    <Typography variant="h5" className="fw-bolder">{details.make} {details.model}</Typography>
                     <Typography variant="subtitle1">{details.fuelType} {details.year}</Typography>
                     <Typography variant="h6">₹{details.rentPerHrs} per hour</Typography>
                 </CardContent>
@@ -204,7 +209,7 @@ const Vehicles = () => {
                                         valueLabelDisplay="auto"
                                         step={100}
                                         min={0}
-                                        max={10000}
+                                        max={3000}
                                         sx={{
                                             color: '#FFC107',
                                             height: 8,

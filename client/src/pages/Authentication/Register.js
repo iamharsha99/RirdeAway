@@ -18,7 +18,7 @@ function Register() {
     };
 
     try {
-      const response = await axios.post('http://localhost:8081/api/auth/register', data);
+      const response = await axios.post('https://rideaway-server.onrender.com/auth/register', data);
       console.log(response.data);
 
       // Redirect to login page or show success message
