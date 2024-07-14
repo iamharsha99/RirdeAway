@@ -18,7 +18,7 @@ export default function Login() {
     };
 
     try {
-      const response = await axios.post('https://rideaway-server.onrender.com/auth/login', data);
+      const response = await axios.post('https://rideaway-server.onrender.com/api/auth/login', data);
       console.log(response.data);
       setData(response.data.data);
       setToken(response.data.token);

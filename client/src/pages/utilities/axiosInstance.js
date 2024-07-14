@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Set up axios instance with default configuration
 const axiosInstance = axios.create({
-  baseURL: 'https://rideaway-server.onrender.com', // Replace with your API base URL
+  baseURL: 'https://rideaway-server.onrender.com/api', // Replace with your API base URL
 });
 
 // Request interceptor to add token to every request
